@@ -35,6 +35,9 @@ gem 'devise'
 gem 'htmlbeautifier'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
+gem 'react-rails'
+gem 'webpacker', '~> 3.0'
+gem 'babel-source', '~> 5.8.35'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
