@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   resources :decks
   resources :cards
-  resources :mages
+  namespace :api do
+    resources :mages, only: %i[index show create destroy update]
+  end
   devise_for :users
   get 'welcome/index'
   root 'welcome#index'
