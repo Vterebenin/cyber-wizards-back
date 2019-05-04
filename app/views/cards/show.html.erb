@@ -3,7 +3,18 @@
 <p>
   <strong>Name:</strong>
   <%= @card.name %>
+  <div class="b-card-funct">
+    <strong>Function:</strong>
+    <span class="card-funct__function"><%= @card.function %></span>
+  </div>
 </p>
+
+<a href="#" class="b-cast">
+  cast spell!
+</a>
+<div class="random">
+    <%= react_component("CastFunction", { spellFunction: @card.function }) %>
+</div>
 
 <%= link_to 'Edit', edit_card_path(@card) %> |
 <%= link_to 'Back', cards_path %>
