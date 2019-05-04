@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+  get 'fight_field', to: 'fight_field#show'
   resources :decks
   resources :cards
+  mount ActionCable.server => '/cable'
   namespace :api do
     resources :mages, only: %i[index show create destroy update]
   end

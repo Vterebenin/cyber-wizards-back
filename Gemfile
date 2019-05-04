@@ -43,6 +43,7 @@ gem 'webpacker', '>= 4.0.x'
 gem 'babel-source', '~> 5.8.35'
 gem 'responders'
 gem "anycable-rails"
+gem 'jquery-rails'
 
 #custom end
 group :development, :test do

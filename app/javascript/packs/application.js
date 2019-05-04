@@ -6,14 +6,14 @@
 //
 // To reference this file, add <%= javascript_pack_tag 'application' %> to the appropriate
 // layout file, like app/views/layouts/application.html.erb
-
 import React from 'react';
 import { render } from 'react-dom';
 import App from '../components/App';
-
-document.addEventListener('DOMContentLoaded', () => {
-  render(<App />, document.querySelector('#root'));
-});// Support component names relative to this directory:
+if (document.getElementById('root') !=null) {
+  document.addEventListener('DOMContentLoaded', () => {
+    render(<App />, document.querySelector('#root'));
+  });// Support component names relative to this directory:
+}
 var componentRequireContext = require.context("components", true);
 var ReactRailsUJS = require("react_ujs");
 ReactRailsUJS.useContext(componentRequireContext);

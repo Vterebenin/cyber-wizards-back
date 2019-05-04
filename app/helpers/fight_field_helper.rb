@@ -1,0 +1,2 @@
+module FightFieldHelper
+end
