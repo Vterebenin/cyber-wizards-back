@@ -3,5 +3,6 @@
 class WelcomeController < ApplicationController
   def index
     @hi = 'Hello, world'
+    @users = User.all
   end
 end

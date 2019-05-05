@@ -11,7 +11,8 @@
 
 <body>
     <% if user_signed_in? %>
-    <%= current_user.email %>
+        <%= current_user.email %>
+        <%= link_to('Logout', destroy_user_session_path, method: :delete) %>    
     <% end %>
     <p class="notice">
         <%= notice %>
@@ -21,6 +22,9 @@
     </p>
     
     <%= yield %>
+
+    <%= react_component("SearchForOponnent", { greeting: "Hello from react-rails." }) %>
+    
     <%= javascript_pack_tag 'application' %>
 </body>
 

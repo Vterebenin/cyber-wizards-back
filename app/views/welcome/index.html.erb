@@ -1,2 +1,11 @@
 <div id="root"></div>
 
+<table>
+<tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.email %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
